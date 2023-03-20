@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -28,6 +29,9 @@ public class Board {
         System.out.println("podaj numer pozycji, w której chcesz wpisać symbol");
 
        int  playerPosition = scanner.nextInt();
+       Main.userPositions.add(playerPosition);
+
+
 
 
        switch (playerPosition){
@@ -41,7 +45,10 @@ public class Board {
            case 8:  board[4][2] = 'x'; break;
            case 9:  board[4][4] = 'x'; break;
            default: break;
+
+
        }
+        System.out.println(Main.userPositions);
     }
 }
 
