@@ -29,6 +29,7 @@ public class Board {
 
        int  playerPosition = scanner.nextInt();
 
+
        switch (playerPosition){
            case 1:  board[0][0] = 'x'; break;
            case 2:  board[0][2] = 'x'; break;

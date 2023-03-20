@@ -4,9 +4,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Integer> userPositions = new ArrayList<Integer>();
-
-//        userPositions = Arrays.stream(Board.board).toArray();
+       ArrayList<Integer> userPositions = new ArrayList<Integer>();
 
         Board.drawBoard();
 
