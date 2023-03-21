@@ -29,19 +29,19 @@ public class Board {
         }
     }
 
-    public static void addPosition(char[][] board, ArrayList<Integer> postions) {
+    public static void addPosition(char[][] board) {
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
         if (symbol == circle) {
             System.out.println("Podaj numer pozycji, w której chcesz wpisać symbol");
-            playerPosition = scanner.nextInt();
+            position = scanner.nextInt();
             Main.playerPositions.add(position);
             symbol = circle;
 
         } else {
-            computerPosition = random.nextInt(8) + 1;
+            position = random.nextInt(8) + 1;
             Main.computerPositions.add(position);
             symbol = cross;
 

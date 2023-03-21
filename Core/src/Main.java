@@ -5,17 +5,20 @@ public class Main {
     public static ArrayList<Integer> computerPositions = new ArrayList<>();
     public static void main(String[] args) {
 
-
+        Board.drawBoard();
 
         while (true) {
 
-//            Board.drawBoard();
-            Board.addPosition(Board.board, playerPositions);
-            Board.addPosition(Board.board, computerPositions);
+
+            Board.addPosition(Board.board);
+            Board.addPosition(Board.board);
             WinnerChecker.checkWinner(playerPositions);
             WinnerChecker.checkWinner(computerPositions);
+            Board.drawBoard();
 
-            System.out.println(playerPositions);
+
+//            System.out.println("gracz" + playerPositions);
+//            System.out.println("komputer" + computerPositions);
         }
 
     }
