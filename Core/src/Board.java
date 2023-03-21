@@ -8,6 +8,10 @@ public class Board {
     public static int playerPosition = 0;
     public static int computerPosition;
 
+   public static char cross = '\u274C';
+    public static char circle = '\u2b24';
+
+    public static char symbol = circle;
     public static char[][] board = {
 
             {'1', '|', '2', '|', '3'},
@@ -27,27 +31,20 @@ public class Board {
 
     public static void addPosition(char[][] board, ArrayList<Integer> postions) {
 
-
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-
-
-        char cross = '\u274C';
-        char circle = '\u2b24';
-        char symbol;
-
-        if (position == playerPosition) {
+        if (symbol == circle) {
             System.out.println("Podaj numer pozycji, w której chcesz wpisać symbol");
             playerPosition = scanner.nextInt();
             Main.playerPositions.add(position);
             symbol = circle;
-            position = playerPosition;
+
         } else {
             computerPosition = random.nextInt(8) + 1;
             Main.computerPositions.add(position);
             symbol = cross;
-            position = computerPosition;
+
         }
 
         switch (position) {
@@ -81,13 +78,13 @@ public class Board {
             default:
                 break;
         }
-        if (position == playerPosition) {
-            position = computerPosition;
+        if (symbol== cross) {
+            symbol = circle;
         } else {
-            position = playerPosition;
+            symbol = cross;
         }
-        System.out.println("Komputer" + Main.computerPositions);
-        System.out.println(Main.playerPositions);
+//        System.out.println("Komputer" + Main.computerPositions);
+//        System.out.println(Main.playerPositions);
     }
 }
 
