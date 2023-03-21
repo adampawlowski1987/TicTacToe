@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -41,7 +40,7 @@ public class Board {
         if (position == playerPosition) {
             System.out.println("Podaj numer pozycji, w której chcesz wpisać symbol");
             playerPosition = scanner.nextInt();
-            Main.userPositions.add(position);
+            Main.playerPositions.add(position);
             symbol = circle;
             position = playerPosition;
         } else {
@@ -88,7 +87,7 @@ public class Board {
             position = playerPosition;
         }
         System.out.println("Komputer" + Main.computerPositions);
-        System.out.println(Main.userPositions);
+        System.out.println(Main.playerPositions);
     }
 }
 

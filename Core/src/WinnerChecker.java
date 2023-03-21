@@ -28,7 +28,7 @@ public class WinnerChecker {
 
         for (List i : fullList) {
             if (positions.containsAll(i)) {
-                if (positions.equals(Main.userPositions)) {
+                if (positions.equals(Main.playerPositions)) {
 
                     System.out.println("Wygrałeś");
                 } else if (positions.equals(Main.computerPositions)) {
