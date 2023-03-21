@@ -4,7 +4,7 @@ import java.util.List;
 
 public class WinnerChecker {
 
-    public static void checkWinner(ArrayList<Integer> userPosition) {
+    public static void checkWinner(ArrayList<Integer> positions) {
         List topRow = Arrays.asList(1, 2, 3);
         List midRow = Arrays.asList(4, 5, 6);
         List botRow = Arrays.asList(7, 8, 9);
@@ -27,15 +27,21 @@ public class WinnerChecker {
         fullList.add(secondDiagonal);
 
         for (List i : fullList) {
-            if (userPosition.containsAll(i)) {
-                System.out.println("wygrałeś");
-            } else {
+            if (positions.containsAll(i)) {
+                if (positions.equals(Main.userPositions)) {
+
+                    System.out.println("Wygrałeś");
+                } else if (positions.equals(Main.computerPositions)) {
+                    System.out.println("Wygrał komputer");
+                    
+                }
+            } else
                 System.out.print("");
             }
 
         }
     }
-}
+
 
 
 
