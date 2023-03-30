@@ -8,7 +8,7 @@ public class Board {
     public static int playerPosition = 0;
     public static int computerPosition;
 
-   public static char cross = '\u274C';
+   public static char cross = '\u274C';sss
     public static char circle = '\u2b24';
 
     public static char symbol = circle;

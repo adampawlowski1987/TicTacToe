@@ -5,6 +5,7 @@ import java.util.List;
 public class WinnerChecker {
 
     public static void checkWinner(ArrayList<Integer> positions) {
+
         List topRow = Arrays.asList(1, 2, 3);
         List midRow = Arrays.asList(4, 5, 6);
         List botRow = Arrays.asList(7, 8, 9);
