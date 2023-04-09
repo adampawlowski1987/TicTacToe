@@ -12,7 +12,7 @@ public class Board {
     public static char circle = '\u2b24';
 
     public static char symbol = circle;
-    public static char[][] board = {
+    public static char[][] board = {sss
 
             //test
 
